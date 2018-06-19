@@ -1,15 +1,15 @@
 //
-//  perioden_kalenderTests.swift
-//  perioden_kalenderTests
+//  myCalendarTests.swift
+//  myCalendarTests
 //
-//  Created by Benjamin Tiggemann on 17.06.18.
+//  Created by Benjamin Tiggemann on 19.06.18.
 //  Copyright © 2018 Benjamin Tiggemann. All rights reserved.
 //
 
 import XCTest
-@testable import perioden_kalender
+@testable import myCalendar
 
-class perioden_kalenderTests: XCTestCase {
+class myCalendarTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

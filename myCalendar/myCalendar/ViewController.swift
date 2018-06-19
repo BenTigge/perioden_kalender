@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  perioden_kalender
+//  myCalendar
 //
-//  Created by Benjamin Tiggemann on 17.06.18.
+//  Created by Benjamin Tiggemann on 19.06.18.
 //  Copyright © 2018 Benjamin Tiggemann. All rights reserved.
 //
 

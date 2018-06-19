@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  perioden_kalender
+//  myCalendar
 //
-//  Created by Benjamin Tiggemann on 17.06.18.
+//  Created by Benjamin Tiggemann on 19.06.18.
 //  Copyright © 2018 Benjamin Tiggemann. All rights reserved.
 //
 
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "perioden_kalender")
+        let container = NSPersistentContainer(name: "myCalendar")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
