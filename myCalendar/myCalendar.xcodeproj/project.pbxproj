@@ -14,6 +14,9 @@
 		118CFD6920D8FAD000843B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118CFD6820D8FAD000843B7F /* Assets.xcassets */; };
 		118CFD6C20D8FAD000843B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118CFD6A20D8FAD000843B7F /* LaunchScreen.storyboard */; };
 		118CFD7720D8FAD100843B7F /* myCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CFD7620D8FAD100843B7F /* myCalendarTests.swift */; };
+		11DD053420DAD63F00E13A84 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053320DAD63F00E13A84 /* CalendarViewController.swift */; };
+		11DD053620DAD65A00E13A84 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053520DAD65A00E13A84 /* SettingsViewController.swift */; };
+		11DD053820DAD66E00E13A84 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053720DAD66E00E13A84 /* ForYouViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		118CFD7220D8FAD100843B7F /* myCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		118CFD7620D8FAD100843B7F /* myCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCalendarTests.swift; sourceTree = "<group>"; };
 		118CFD7820D8FAD100843B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11DD053320DAD63F00E13A84 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		11DD053520DAD65A00E13A84 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		11DD053720DAD66E00E13A84 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 				118CFD6A20D8FAD000843B7F /* LaunchScreen.storyboard */,
 				118CFD6D20D8FAD000843B7F /* Info.plist */,
 				118CFD6520D8FACF00843B7F /* myCalendar.xcdatamodeld */,
+				11DD053320DAD63F00E13A84 /* CalendarViewController.swift */,
+				11DD053520DAD65A00E13A84 /* SettingsViewController.swift */,
+				11DD053720DAD66E00E13A84 /* ForYouViewController.swift */,
 			);
 			path = myCalendar;
 			sourceTree = "<group>";
@@ -200,8 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DD053620DAD65A00E13A84 /* SettingsViewController.swift in Sources */,
+				11DD053420DAD63F00E13A84 /* CalendarViewController.swift in Sources */,
 				118CFD6720D8FACF00843B7F /* myCalendar.xcdatamodeld in Sources */,
 				118CFD6120D8FACF00843B7F /* ViewController.swift in Sources */,
+				11DD053820DAD66E00E13A84 /* ForYouViewController.swift in Sources */,
 				118CFD5F20D8FACF00843B7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
