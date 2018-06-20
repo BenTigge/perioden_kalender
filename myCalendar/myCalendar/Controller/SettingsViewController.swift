@@ -1,5 +1,5 @@
 //
-//  CalendarViewController.swift
+//  SettingsViewController.swift
 //  myCalendar
 //
 //  Created by Benjamin Tiggemann on 20.06.18.
@@ -8,17 +8,25 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.title = "Optionen"
+        
+        // loads the pink fading background
+        view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background_View"))
+        
+        
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
 }
