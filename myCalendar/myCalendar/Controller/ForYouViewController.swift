@@ -17,9 +17,7 @@ class ForYouViewController: UIViewController {
         
         // loads the pink fading background
         //view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background_View"))
-        let background = UIImageView(frame: CGRect(x: 0, y: 0, width: 2000, height: 800))
-        background.image = #imageLiteral(resourceName: "background_View")
-        view.addSubview(background)
+        setBackgoundImage(vc: self)
         
         
         

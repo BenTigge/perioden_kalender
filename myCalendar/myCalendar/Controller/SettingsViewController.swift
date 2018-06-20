@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
         self.title = "Optionen"
         
         // loads the pink fading background
-        view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background_View"))
+        setBackgoundImage(vc: self)
         
         
     }

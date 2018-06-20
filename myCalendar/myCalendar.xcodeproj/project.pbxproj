@@ -16,6 +16,8 @@
 		11DD053620DAD65A00E13A84 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053520DAD65A00E13A84 /* SettingsViewController.swift */; };
 		11DD053820DAD66E00E13A84 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053720DAD66E00E13A84 /* ForYouViewController.swift */; };
 		11DD053E20DAEFEC00E13A84 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053D20DAEFEC00E13A84 /* TabBarController.swift */; };
+		11DD054020DAFA1400E13A84 /* device_height_width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD053F20DAFA1400E13A84 /* device_height_width.swift */; };
+		11DD054220DAFB2100E13A84 /* SetBackgoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD054120DAFB2100E13A84 /* SetBackgoundImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		11DD053520DAD65A00E13A84 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		11DD053720DAD66E00E13A84 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		11DD053D20DAEFEC00E13A84 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		11DD053F20DAFA1400E13A84 /* device_height_width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = device_height_width.swift; sourceTree = "<group>"; };
+		11DD054120DAFB2100E13A84 /* SetBackgoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackgoundImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				118CFD6A20D8FAD000843B7F /* LaunchScreen.storyboard */,
 				118CFD6D20D8FAD000843B7F /* Info.plist */,
 				118CFD6520D8FACF00843B7F /* myCalendar.xcdatamodeld */,
+				11DD053F20DAFA1400E13A84 /* device_height_width.swift */,
 			);
 			path = myCalendar;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		11DD053920DAE7C000E13A84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				11DD054120DAFB2100E13A84 /* SetBackgoundImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +233,8 @@
 				118CFD6720D8FACF00843B7F /* myCalendar.xcdatamodeld in Sources */,
 				11DD053820DAD66E00E13A84 /* ForYouViewController.swift in Sources */,
 				118CFD5F20D8FACF00843B7F /* AppDelegate.swift in Sources */,
+				11DD054020DAFA1400E13A84 /* device_height_width.swift in Sources */,
+				11DD054220DAFB2100E13A84 /* SetBackgoundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
