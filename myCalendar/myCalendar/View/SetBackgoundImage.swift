@@ -8,7 +8,8 @@
 
 import UIKit
 
-let (width, height) = UIScreen.self().applicationFrame.wh
+let width = UIScreen.main.bounds.width
+let height = UIScreen.main.bounds.height
 
 func setBackgoundImage(vc: UIViewController) {
     let background = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))

@@ -12,6 +12,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         // create ViewControllers
         let forYouVC = ForYouViewController()
@@ -27,6 +28,9 @@ class TabBarController: UITabBarController {
         let tabBarItems = [forYouVC, calendarVC, settingsVC]
         
         viewControllers = tabBarItems
+        self.tabBar.isTranslucent = true
+        
+    
         // Do any additional setup after loading the view.
     }
 

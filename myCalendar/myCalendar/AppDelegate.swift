@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = UINavigationController(rootViewController: TabBarController())
         window!.makeKeyAndVisible()
+        
+        // hide UINavigationBar on all ViewControllers
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.isHidden = true
         return true
     }
 
