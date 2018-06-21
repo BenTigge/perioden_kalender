@@ -8,12 +8,19 @@
 
 import UIKit
 
+// get screensize
 let width = UIScreen.main.bounds.width
 let height = UIScreen.main.bounds.height
 
+// sets Background of view to pink fading image
+// gets UIViewController
+// returns nothing
 func setBackgoundImage(vc: UIViewController) {
+    // create UIImageView with size of screen
     let background = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+    // set image
     background.image = #imageLiteral(resourceName: "background_View")
+    // adds subview to viewController
     vc.view.addSubview(background)
     
 }

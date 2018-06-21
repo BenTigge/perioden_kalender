@@ -18,7 +18,6 @@ class SettingsViewController: UIViewController {
         // loads the pink fading background
         setBackgoundImage(vc: self)
         
-        
     }
 
     

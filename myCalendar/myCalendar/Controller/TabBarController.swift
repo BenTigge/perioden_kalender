@@ -13,7 +13,6 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
         // create ViewControllers
         let forYouVC = ForYouViewController()
         let calendarVC = CalendarViewController()
@@ -24,14 +23,14 @@ class TabBarController: UITabBarController {
         calendarVC.tabBarItem = UITabBarItem(title: "Kalender", image: nil, selectedImage: nil)
         settingsVC.tabBarItem = UITabBarItem(title: "Optionen", image: nil, selectedImage: nil)
         
-        
+        // list of the items stored in tabBar
         let tabBarItems = [forYouVC, calendarVC, settingsVC]
         
+        //adds items to ViewControllers
         viewControllers = tabBarItems
-        self.tabBar.isTranslucent = true
         
-    
-        // Do any additional setup after loading the view.
+        //sets style of tabBar to translucent
+        self.tabBar.isTranslucent = true
     }
 
     override func didReceiveMemoryWarning() {
