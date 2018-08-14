@@ -1,0 +1,14 @@
+platform :ios, '11.0'
+
+target 'myCalendar' do
+
+  use_frameworks!
+
+  # Pods for myCalendar
+
+  target 'myCalendarTests' do
+    inherit! :search_paths
+    pod 'JTAppleCalendar', '~> 7.0'
+  end
+
+end

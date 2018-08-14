@@ -12,15 +12,11 @@ class ForYouViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         self.title = "Für Dich"
         
         // loads the pink fading background
-        //view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background_View"))
         setBackgoundImage(vc: self)
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

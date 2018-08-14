@@ -17,9 +17,14 @@ let height = UIScreen.main.bounds.height
 // returns nothing
 func setBackgoundImage(vc: UIViewController) {
     // create UIImageView with size of screen
-    let background = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+    var background = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+    if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+        background = UIImageView(frame: CGRect(x: 0, y: 0, width: height, height: width))
+    }
+    
     // set image
     background.image = #imageLiteral(resourceName: "background_View")
+    
     // adds subview to viewController
     vc.view.addSubview(background)
     
