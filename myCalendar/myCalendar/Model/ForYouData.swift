@@ -1,5 +1,5 @@
 //
-//  ForYouAI.swift
+//  ForYouData.swift
 //  myCalendar
 //
 //  Created by Benjamin Tiggemann on 14.08.18.
@@ -8,5 +8,7 @@
 
 import Foundation
 
+class ForYouData {
+    static var forYouCellsContent = [CellContent]()
+}
 
-//ToDo

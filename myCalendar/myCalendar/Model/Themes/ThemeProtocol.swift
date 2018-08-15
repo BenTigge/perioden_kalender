@@ -10,6 +10,10 @@ import UIKit
 
 protocol ThemeProtocol {
     var backgroundColor: UIColor { get }
-    var backgroundImage: UIImageView? { get }
+    var backgroundImage: UIImage? { get }
+    var MainTextColor: UIColor { get }
+    var ContrastTextColor: UIColor { get }
+    var highlightedButtonColor: UIColor { get }
+    var tabBarBackgroundColor: UIColor { get }
     
 }

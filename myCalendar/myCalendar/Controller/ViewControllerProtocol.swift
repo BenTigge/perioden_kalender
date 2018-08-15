@@ -1,5 +1,5 @@
 //
-//  Theme.swift
+//  ViewControllerProtocol.swift
 //  myCalendar
 //
 //  Created by Benjamin Tiggemann on 14.08.18.
@@ -8,7 +8,3 @@
 
 import UIKit
 
-class Theme {
-    static var currentTheme: ThemeProtocol = DarkTheme()
-    static var currentThemeEnum: appTheme = .dark
-}

@@ -9,7 +9,12 @@
 import UIKit
 
 class LightTheme: ThemeProtocol {
-    var backgroundImage: UIImageView?
+    
+    var tabBarBackgroundColor = UIColor.lightGray
+    var highlightedButtonColor = UIColor.darkGray
+    var MainTextColor = UIColor.black
+    var ContrastTextColor = UIColor.white
+    var backgroundImage: UIImage?
     let backgroundColor = UIColor.white
     
 }

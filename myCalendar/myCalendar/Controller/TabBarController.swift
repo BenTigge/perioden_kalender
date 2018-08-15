@@ -31,6 +31,16 @@ class TabBarController: UITabBarController {
         
         //sets style of tabBar to translucent
         self.tabBar.isTranslucent = true
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateTabBar()
+        
+    }
+    
+    func updateTabBar() {
+        self.tabBar.backgroundColor = Theme.currentTheme.tabBarBackgroundColor
     }
 
     override func didReceiveMemoryWarning() {

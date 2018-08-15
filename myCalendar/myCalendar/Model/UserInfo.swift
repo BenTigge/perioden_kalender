@@ -7,10 +7,14 @@
 //
 
 import Foundation
+
 struct UserInfo: Codable {
-    var FirstName: String
-    var LastName: String
-    var Age: Int
-    var EmailAdress: String
+    var firstName: String
+    var lastName: String
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+    var birtDate: Date
+    var emailAdress: String
     
 }

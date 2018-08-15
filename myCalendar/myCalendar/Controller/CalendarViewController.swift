@@ -10,6 +10,7 @@ import UIKit
 
 class CalendarViewController: UIViewController {
     
+    
     // loads header view
     let ch = CalendarHeaderView(frame: CGRect(x: 0, y: 0, width: width, height: 30))
     let cb = CalendarBodyView(frame: CGRect(x: 0, y: 0, width: width, height: 250))
@@ -17,9 +18,6 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // loads the pink fading background
-        setBackgoundImage(vc: self)
         
 
         // creates vertical stackView for header and body
@@ -56,8 +54,20 @@ class CalendarViewController: UIViewController {
         // enables constraints
         calendarStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        
      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // loads the background
+        // setBackgoundImage(vc: self)
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+        cb.label.textColor = Theme.currentTheme.MainTextColor
+        cb.label2.textColor = Theme.currentTheme.MainTextColor
+        ch.monthLabel.textColor = Theme.currentTheme.MainTextColor
+        ch.nextMonthButton.setTitleColor(Theme.currentTheme.MainTextColor, for: .normal)
+        ch.nextMonthButton.setTitleColor(Theme.currentTheme.highlightedButtonColor, for: .highlighted)
+        ch.previousMonthButton.setTitleColor(Theme.currentTheme.MainTextColor, for: .normal)
+        ch.previousMonthButton.setTitleColor(Theme.currentTheme.highlightedButtonColor, for: .highlighted)
     }
     
     override func didReceiveMemoryWarning() {

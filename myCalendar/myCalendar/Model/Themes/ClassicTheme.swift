@@ -9,14 +9,17 @@
 import UIKit
 
 class ClassicTheme: ThemeProtocol {
-    var backgroundImage: UIImageView?
     
+    var tabBarBackgroundColor = UIColor.white
+    var highlightedButtonColor = UIColor.darkGray
+    var MainTextColor = UIColor.black
+    var ContrastTextColor = UIColor.white
+    var backgroundImage: UIImage?
+    let backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "background_View"))
+
     
-    let backgroundColor = UIColor.white
-    
-    init () {
-        backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        backgroundImage!.image = #imageLiteral(resourceName: "background_View")
+    init() {
+        backgroundImage = #imageLiteral(resourceName: "background_View")
     }
     
     

@@ -9,7 +9,12 @@
 import UIKit
 
 class DarkTheme: ThemeProtocol {
-    var backgroundImage: UIImageView?
+    
+    var tabBarBackgroundColor = UIColor.red
+    var highlightedButtonColor = UIColor.lightGray
+    var MainTextColor = UIColor.white
+    var ContrastTextColor = UIColor.black
+    var backgroundImage: UIImage?
     var backgroundColor = UIColor.black
     
 }

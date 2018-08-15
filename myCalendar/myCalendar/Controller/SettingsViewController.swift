@@ -38,17 +38,31 @@ class SettingsViewController: UIViewController {
     
     @objc func dismissPicker() {
         view.endEditing(true)
-        changeTheme(selTheme: selectedTheme!)
+        if selectedTheme != nil {
+            changeTheme(selTheme: selectedTheme!)
+        }
     }
     
+    
+    // function to change the Theme based on the selection of Theme Picker
     func changeTheme(selTheme: String) {
         if selTheme == "Klassisch" {
             Theme.currentTheme = ClassicTheme()
+            Theme.currentThemeEnum = .classic
+            UserDefaults.standard.set("Classic", forKey: "CurrentTheme")
         } else if selTheme == "Freundlich" {
             Theme.currentTheme = LightTheme()
+            Theme.currentThemeEnum = .light
+            UserDefaults.standard.set("Light", forKey: "CurrentTheme")
         } else if selTheme == "Dunkel" {
             Theme.currentTheme = DarkTheme()
+             Theme.currentThemeEnum = .dark
+            UserDefaults.standard.set("Dark", forKey: "CurrentTheme")
         }
+        
+        // updates this view directly
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+        
         
     }
     
@@ -57,22 +71,34 @@ class SettingsViewController: UIViewController {
         
         self.title = "Optionen"
         
-        // loads the pink fading background
-        setBackgoundImage(vc: self)
+        // textfield to choose the Theme
         view.addSubview(themeTextField)
         themeTextField.placeholder = "Erscheinungsbild"
+        
+        // init Theme picker
         createThemePicker()
+        
+        // init doneButton for Theme Picker
         createToolbar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // loads and updates the background
+        view.backgroundColor = Theme.currentTheme.backgroundColor
+    }
+    
 }
 
+
+// implements functions neccessary for ThemePicker
 extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

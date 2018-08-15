@@ -9,5 +9,5 @@
 import Foundation
 
 struct AppSettings {
-    var appearance: appStyle
+    var appearance: appTheme
 }

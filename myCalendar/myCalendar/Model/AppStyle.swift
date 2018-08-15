@@ -10,9 +10,9 @@ import Foundation
 
 
 // contains the three different appearences of the app
-enum appStyle {
+enum appTheme {
     
-    case classic, bright, dark
+    case classic, light, dark
     
 }
 

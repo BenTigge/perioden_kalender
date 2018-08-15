@@ -23,7 +23,13 @@ func setBackgoundImage(vc: UIViewController) {
     }
     
     // set image
-    background.image = #imageLiteral(resourceName: "background_View")
+    
+    if Theme.currentThemeEnum == .classic {
+        background.image = Theme.currentTheme.backgroundImage
+    } else {
+        background.backgroundColor = Theme.currentTheme.backgroundColor
+    }
+    
     
     // adds subview to viewController
     vc.view.addSubview(background)
