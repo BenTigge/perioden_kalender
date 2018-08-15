@@ -50,7 +50,7 @@ class ForYouViewController: UITableViewController{
             
             let estimatedFrame = NSString(string: cell.content).boundingRect(with: size, options: .usesLineFragmentOrigin , attributes: attributes, context: nil)
             
-            estimatedHeigth += estimatedFrame.height - 30
+            // estimatedHeigth += estimatedFrame.height - 30
         }
         
         return estimatedHeigth
@@ -73,7 +73,15 @@ class ForYouViewController: UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
         
         // loads background
-        view.backgroundColor = Theme.currentTheme.backgroundColor
+        //view.backgroundColor = Theme.currentTheme.backgroundColor
+        if Theme.currentTheme is ClassicTheme {
+            let imageView = UIImageView(image: #imageLiteral(resourceName: "background_View"))
+            tableView.backgroundView = imageView
+        } else {
+            view.backgroundColor = Theme.currentTheme.backgroundColor
+            tableView.backgroundView = nil
+        }
+        
         
         
     }

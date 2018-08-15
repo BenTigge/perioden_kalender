@@ -14,10 +14,14 @@ class ForYouCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         
-        
+        addSubview(logoImage)
         addSubview(contentLabel)
         
-        contentLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop:5, paddingLeft: 100, paddingBottom: 0, paddingRight: 20, width: frame.size.width-50, height: 0, enableInsets: false)
+        contentLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 90, paddingBottom: 0, paddingRight: 20, width: frame.size.width-50, height: 0, enableInsets: false)
+        contentLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
+        
+        
+        logoImage.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 10, width: 80, height: 80, enableInsets: false)
         
         
 //        let stackView = UIStackView(arrangedSubviews: [contentLabel])
@@ -33,8 +37,15 @@ class ForYouCell: UITableViewCell {
             contentLabel.text = cellContent!.content
             contentAddLabel.text = cellContent?.contentAdd
             contentHighlightedLabel.text = cellContent?.contentHighlighted
+            logoImage.image = cellContent?.logo
         }
     }
+    
+    private let logoImage : UIImageView = {
+        let li = UIImageView()
+        li.backgroundColor = .red
+        return li
+    }()
     
     private let contentLabel : UILabel = {
         let lbl = UILabel()
