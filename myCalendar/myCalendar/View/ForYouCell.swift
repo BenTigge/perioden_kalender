@@ -17,11 +17,12 @@ class ForYouCell: UITableViewCell {
         addSubview(logoImage)
         addSubview(contentLabel)
         
-        contentLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 90, paddingBottom: 0, paddingRight: 20, width: frame.size.width-50, height: 0, enableInsets: false)
+        contentLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 80, paddingBottom: 0, paddingRight: 0, width: frame.size.width*0.8, height: 0, enableInsets: false)
         contentLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
         
         
-        logoImage.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 10, width: 80, height: 80, enableInsets: false)
+        logoImage.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 50, height: 50, enableInsets: false)
+        
         
         
 //        let stackView = UIStackView(arrangedSubviews: [contentLabel])
@@ -43,7 +44,6 @@ class ForYouCell: UITableViewCell {
     
     private let logoImage : UIImageView = {
         let li = UIImageView()
-        li.backgroundColor = .red
         return li
     }()
     
@@ -82,5 +82,19 @@ class ForYouCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 4
+            frame.size.height -= 2 * 5
+            frame.origin.x += 12
+            frame.size.width -= 2*12
+            super.frame = frame
+        }
     }
 }

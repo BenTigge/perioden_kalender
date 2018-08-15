@@ -28,8 +28,8 @@ class ForYouViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ForYouCell
         currentCell = cells[indexPath.row]
         cell.cellContent = currentCell
-        cell.layer.backgroundColor = UIColor.clear.cgColor
-       
+        cell.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 1, alpha: 0.8)
+        cell.layer.cornerRadius = 15
         cell.selectionStyle = .none
         cell.separatorInset = UIEdgeInsets.zero
         return cell
@@ -37,24 +37,36 @@ class ForYouViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        var estimatedHeigth = CGFloat(100)
+        let estimatedHeigth = CGFloat(100)
+        
         // estimates the hight of the cell based of its content
-        if let cell = currentCell {
-            
-            let approxWidth = view.frame.width - 100
-            
-            let size = CGSize(width: approxWidth, height: 1000)
-            
-            let attributes : [NSAttributedStringKey : Any] = [.font: UIFont.systemFont(ofSize: 16)]
-            
-            
-            let estimatedFrame = NSString(string: cell.content).boundingRect(with: size, options: .usesLineFragmentOrigin , attributes: attributes, context: nil)
-            
+//        if let cell = currentCell {
+//
+//            let approxWidth = view.frame.width - 100
+//
+//            let size = CGSize(width: approxWidth, height: 1000)
+//
+//            let attributes : [NSAttributedStringKey : Any] = [.font: UIFont.systemFont(ofSize: 16)]
+//
+//
+//            let estimatedFrame = NSString(string: cell.content).boundingRect(with: size, options: .usesLineFragmentOrigin , attributes: attributes, context: nil)
+        
             // estimatedHeigth += estimatedFrame.height - 30
-        }
+       // }
         
         return estimatedHeigth
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        let text = UITextView()
+        text.text = "Hallo Sarah, heute ist der 14. August. Hier sind deine wichtigsten Informationen:"
+        text.frame = CGRect(x: 12 + 15, y: 0, width: 200, height: 30)
+        view.addSubview(text)
+        view.backgroundColor = .red
+        return view
+    }
+    
     
     
     override func viewDidLoad() {
