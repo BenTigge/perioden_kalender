@@ -14,7 +14,7 @@ struct CellContent {
     
     //each cell contains a logo and Text
     var content: String
-    var logo: UIImage
+    var logo: UIImage?
     
     
     // Cells can have a highlighted Content Area and additional Content after it

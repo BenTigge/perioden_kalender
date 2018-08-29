@@ -17,22 +17,18 @@ class ForYouCell: UITableViewCell {
         addSubview(logoImage)
         addSubview(contentLabel)
         
+        
+        
+        // constraints for content and logo
         contentLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 80, paddingBottom: 0, paddingRight: 0, width: frame.size.width*0.8, height: 0, enableInsets: false)
         contentLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0).isActive = true
         
         
         logoImage.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 15, paddingBottom: 0, paddingRight: 15, width: 50, height: 50, enableInsets: false)
         
-        
-        
-//        let stackView = UIStackView(arrangedSubviews: [contentLabel])
-//
-//        stackView.distribution = .equalSpacing
-//        stackView.axis = .horizontal
-//        stackView.spacing = 5
-//        addSubview(stackView)
     }
     
+    // fetches cell contents
     var cellContent : CellContent? {
         didSet {
             contentLabel.text = cellContent!.content
@@ -42,6 +38,8 @@ class ForYouCell: UITableViewCell {
         }
     }
     
+    
+    // inits all parts of cell
     private let logoImage : UIImageView = {
         let li = UIImageView()
         return li
@@ -53,7 +51,7 @@ class ForYouCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.textAlignment = .left
         lbl.numberOfLines = 0
-        lbl.lineBreakMode = .byWordWrapping
+        lbl.lineBreakMode  = .byWordWrapping
         return lbl
     }()
     
